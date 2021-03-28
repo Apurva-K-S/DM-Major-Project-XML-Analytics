@@ -1,4 +1,5 @@
-<DimStores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/apurva/Desktop/DM/xquery/DimStores.xml">
+﻿<DimStores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="/home/apurva/Desktop/DM/xquery/XML_Analytics/project_files/DimStores.xsd">
 	<store-collection>
 		<store>
 			<StoreID>1</StoreID>

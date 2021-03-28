@@ -1,5 +1,5 @@
-<DimCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="./home/apurva/Desktop/DM/xquery/dimcust.xsd">
+﻿<DimCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="/home/apurva/Desktop/DM/xquery/project_files/dimcust.xsd">
     
     <Customer-collection>
 

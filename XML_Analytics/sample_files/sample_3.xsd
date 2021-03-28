@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+    this file has primary key: "departmentID" which is inside "Department" 
+    absolute path: Company/Departments/Department/departmentID.
+
+    This primary key will be referred by "department" of Employee from sample_2.xsd.
+-->
+
+<xs:schema
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns="http://sample3"
+xmlns:example3="http://sample3"
+targetNamespace="http://sample3"
+elementFormDefault="qualified"
+attributeFormDefault="unqualified">
+
+    <xs:element name="Company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Departments">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Department">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="building" type="xs:string"/>
+                                        <xs:element name="departmentID" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="KeyDepartmentByID">
+            <xs:selector xpath="example3:Departments/example3:Department" />
+            <xs:field xpath="departmentID" />
+        </xs:key>
+    </xs:element>
+</xs:schema>
+
+<!--
+ERROR encountered:
+
+apurva@apurva:~/Desktop/DM/xquery$ xmllint -noout -schema sample_3.xsd sample_3.xml
+sample_3.xml:5: element Department: Schemas validity error : Element '{http://sample3}Department': Not all fields of key identity-constraint '{http://sample3}KeyDepartmentByID' evaluate to a node.
+sample_3.xml fails to validate
+apurva@apurva:~/Desktop/DM/xquery$ 
+-->

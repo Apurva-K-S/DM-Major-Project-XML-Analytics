@@ -1,8 +1,10 @@
-<factProductSales xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:noNamespaceSchemaLocation="/home/apurva/Desktop/DM/xquery/factProductSales.xsd">
+﻿<FactProductSales xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" 
+    xsi:schemaLocation="/home/apurva/Desktop/DM/xquery/FactProductSales_new.xsd"
+    
+    >
 
-    <factProductSales-collection>
-        <factProductSale>
+    <ProductSales-collection>
+        <ProductSale>
             <transaction_id> 1</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 1</customer_id>
@@ -11,9 +13,9 @@
             <sales_total_cost>26 </sales_total_cost>
             <product_actual_cost>22 </product_actual_cost>
             <deviation>4 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 2</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 1</customer_id>
@@ -22,9 +24,9 @@
             <sales_total_cost>48 </sales_total_cost>
             <product_actual_cost>45 </product_actual_cost>
             <deviation>3 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 3</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 1</customer_id>
@@ -33,9 +35,9 @@
             <sales_total_cost>130.5 </sales_total_cost>
             <product_actual_cost>126 </product_actual_cost>
             <deviation>4.5 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 4</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 2</customer_id>
@@ -44,9 +46,9 @@
             <sales_total_cost>87 </sales_total_cost>
             <product_actual_cost>84 </product_actual_cost>
             <deviation>3 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 5</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 2</customer_id>
@@ -55,9 +57,9 @@
             <sales_total_cost>120 </sales_total_cost>
             <product_actual_cost>108 </product_actual_cost>
             <deviation>12 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 6</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 3</customer_id>
@@ -66,9 +68,9 @@
             <sales_total_cost>26 </sales_total_cost>
             <product_actual_cost>22 </product_actual_cost>
             <deviation>4 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 7</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 3</customer_id>
@@ -77,9 +79,9 @@
             <sales_total_cost>43.5 </sales_total_cost>
             <product_actual_cost>42 </product_actual_cost>
             <deviation>1.5 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 8</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 3</customer_id>
@@ -88,9 +90,9 @@
             <sales_total_cost>120 </sales_total_cost>
             <product_actual_cost>108 </product_actual_cost>
             <deviation>12 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 9</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 3</customer_id>
@@ -99,9 +101,9 @@
             <sales_total_cost>278 </sales_total_cost>
             <product_actual_cost>270 </product_actual_cost>
             <deviation>8 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 10</transaction_id>
             <store_id>2 </store_id>
             <customer_id> 1</customer_id>
@@ -110,9 +112,9 @@
             <sales_total_cost>60 </sales_total_cost>
             <product_actual_cost>54 </product_actual_cost>
             <deviation>6 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 11</transaction_id>
             <store_id>2 </store_id>
             <customer_id> 1</customer_id>
@@ -121,9 +123,9 @@
             <sales_total_cost>139 </sales_total_cost>
             <product_actual_cost>135 </product_actual_cost>
             <deviation>4 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 12</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 1</customer_id>
@@ -132,9 +134,9 @@
             <sales_total_cost> 60 </sales_total_cost>
             <product_actual_cost>54 </product_actual_cost>
             <deviation>6 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 13</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 2</customer_id>
@@ -143,9 +145,9 @@
             <sales_total_cost>24 </sales_total_cost>
             <product_actual_cost>22.5 </product_actual_cost>
             <deviation>1.50 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 14</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 2</customer_id>
@@ -154,9 +156,9 @@
             <sales_total_cost>13 </sales_total_cost>
             <product_actual_cost>11 </product_actual_cost>
             <deviation>2</deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 15</transaction_id>
             <store_id>1 </store_id>
             <customer_id> 3</customer_id>
@@ -165,9 +167,9 @@
             <sales_total_cost>24 </sales_total_cost>
             <product_actual_cost>22.5 </product_actual_cost>
             <deviation>1.5 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 16</transaction_id>
             <store_id>2 </store_id>
             <customer_id> 1</customer_id>
@@ -176,9 +178,9 @@
             <sales_total_cost>6.5 </sales_total_cost>
             <product_actual_cost>5.5 </product_actual_cost>
             <deviation>1 </deviation>
-        </factProductSale>
+        </ProductSale>
 
-        <factProductSale>
+        <ProductSale>
             <transaction_id> 17</transaction_id>
             <store_id>2 </store_id>
             <customer_id> 1</customer_id>
@@ -187,10 +189,10 @@
             <sales_total_cost>43.5 </sales_total_cost>
             <product_actual_cost>42 </product_actual_cost>
             <deviation>1.5 </deviation>
-        </factProductSale>
+        </ProductSale>
 
 
 
-    </factProductSales-collection>
+    </ProductSales-collection>
 
-</factProductSales>
+</FactProductSales>

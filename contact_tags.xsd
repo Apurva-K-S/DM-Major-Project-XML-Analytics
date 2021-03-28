@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:contacts="http://www.example.com/contacts"
+targetNamespace="http://www.example.com/contacts"
+elementFormDefault="qualified">
+    <simpleType name="ContactTagsType">
+        <restriction base="string">
+            <enumeration value="author"/>
+            <enumeration value="xml"/>
+            <enumeration value="poetry"/>
+            <enumeration value="consultant"/>
+            <enumeration value="CGI"/>
+            <enumeration value="semantics"/>
+            <enumeration value="animals"/>
+        </restriction>
+    </simpleType>
+</schema>

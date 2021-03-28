@@ -1,0 +1,17 @@
+<Company xmlns="http://sample1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://sample1 test2.xsd">
+
+    <Departments>
+        <Department name="Human Resources" building="Building 1" departmentID="hr_dept"/>
+        <Department name="Development" building="Building 2" departmentID="development_dept"/>
+        <Department name="Testing" building="Building 2" departmentID="testing_dept"/>
+    </Departments>
+
+    <Employees>
+        <Employee name="Oliver" position="Developer" department="development_dept"/>
+        <Employee name="Mwatha" position="Developer" department="development_dept"/>
+        <Employee name="Soyapi" position="Developer" department="development_dept"/>
+        <Employee name="Mike" position="Testing" department="testing_dept"/>
+    </Employees>
+
+</Company>

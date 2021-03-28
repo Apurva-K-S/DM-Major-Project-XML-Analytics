@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<!--
+    this file has foreign key: "department" which is inside "Employee" 
+    absolute path: Company/Employees/Employee/department.
+
+    This foreign key refers to primary key ("departmentID") of sample_3.xsd.
+-->
+<xs:schema
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns="http://sample2"
+xmlns:example2="http://sample2"
+targetNamespace="http://sample2"
+
+xmlns:sample3="http://sample3"
+
+elementFormDefault="qualified"
+attributeFormDefault="unqualified">
+
+    <xs:import namespace="http://sample3" schemaLocation="sample_3.xsd"/>
+
+    <xs:element name="Company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Employees">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Employee">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="position" type="xs:string"/>
+                                        <xs:element name="department" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <xs:keyref name="RefEmployeeToDepartment" refer="sample3:KeyDepartmentByID">
+            <xs:selector xpath="example2:Employees/example2:Employee" />
+            <xs:field xpath="department" />
+        </xs:keyref>
+
+    </xs:element>
+</xs:schema>

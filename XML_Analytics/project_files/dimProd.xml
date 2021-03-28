@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<DimProduct xsi:noNamespaceSchemaLocation="/home/srinivas/Music/proj_dim_prod.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<DimProduct xsi:noNamespaceSchemaLocation="/home/apurva/Desktop/DM/xquery/XML_Analytics/project_files/dimProd.xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <Product-Collection>
 <Product> 
   <ProductKey>1</ProductKey>

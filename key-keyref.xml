@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<library xsi:noNamespaceSchemaLocation="file:///D:/Courses/DataModeling-2/XML_Module/schema-trials/key-keyref.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <book-collection>
+    <book>
+      <isbn>12345</isbn>
+      <author-ref>auth-01</author-ref>
+      <title>Some book</title>
+    </book>
+    <book>
+      <isbn>12345</isbn>
+      <author-ref>auth-01</author-ref>
+      <title>Some other book</title>
+    </book>
+  </book-collection>
+  <author-collection>
+    <author>
+      <author-id>auth-01</author-id>
+      <author-name>Some author</author-name>
+      <author-country>Some country</author-country>
+    </author>
+    <author>
+      <author-id>auth-02</author-id>
+      <author-name>Some other author</author-name>
+      <author-country>Some other country</author-country>
+    </author>
+  </author-collection>
+</library>
+

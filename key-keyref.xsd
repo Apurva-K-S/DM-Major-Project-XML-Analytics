@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" elementFormDefault="qualified">
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="book-collection"/>
+        <xs:element ref="author-collection"/>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="auth-key">
+            <xs:selector xpath="author-collection/author"/>
+            <xs:field xpath="author-id"/>
+    </xs:key>
+    <xs:keyref name="auth-ref" refer="auth-key">
+    <xs:selector xpath="book-collection/book"/>
+    <xs:field xpath="author-ref"/>    
+    </xs:keyref>
+    </xs:element>
+  <xs:element name="book-collection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="book" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="book">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="isbn"/>
+        <xs:element ref="author-ref"/>
+        <xs:element ref="title"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isbn" type="xs:string"/>
+  <xs:element name="author-ref" type="xs:string"/>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="author-collection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="author" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="author">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="author-id"/>
+        <xs:element ref="author-name"/>
+        <xs:element ref="author-country"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="author-id" type="xs:string"/>
+  <xs:element name="author-name" type="xs:string"/>
+  <xs:element name="author-country" type="xs:string"/>
+</xs:schema>

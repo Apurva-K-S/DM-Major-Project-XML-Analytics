@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<xs:schema
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns="http://sample1"
+xmlns:example1="http://sample1"
+targetNamespace="http://sample1"
+elementFormDefault="qualified"
+attributeFormDefault="unqualified">
+
+    <xs:element name="Company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Departments">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Department">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string"/>
+                                    <xs:attribute name="building" type="xs:string"/>
+                                    <xs:attribute name="departmentID" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Employees">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Employee">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string"/>
+                                    <xs:attribute name="position" type="xs:string"/>
+                                    <xs:attribute name="department" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:key name="KeyDepartmentByID">
+            <xs:selector xpath="example1:Departments/example1:Department" />
+            <xs:field xpath="@departmentID" />
+        </xs:key>
+
+        <xs:keyref name="RefEmployeeToDepartment" refer="KeyDepartmentByID">
+            <xs:selector xpath="example1:Employees/example1:Employee" />
+            <xs:field xpath="@department" />
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

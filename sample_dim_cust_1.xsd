@@ -1,6 +1,13 @@
+<?xml version="1.0"?>
+
+<!--<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" 
+xmlns:target="http://www.example.com/sampledimcust"
+targetNamespace="http://www.example.com/sampledimcust"
+elementFormDefault="qualified"> 
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" 
-targetNamespace="http://www.w3schools.com"
 elementFormDefault="qualified">
     
     <xs:element name="DimCustomer">
@@ -41,4 +48,31 @@ elementFormDefault="qualified">
     <xs:element name="CustomerName" type="xs:string"/>
     <xs:element name="Gender" type="xs:string"/>
 
+</xs:schema>-->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" 
+xmlns:target="http://www.example.com/sampledimcust"
+targetNamespace="http://www.example.com/sampledimcust"
+elementFormDefault="qualified"> 
+
+    <xs:element name="customer">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="CustomerID" type="xs:integer"/>
+                <xs:element name="CustomerAltID" type="xs:integer"/>
+                <xs:element name="CustomerName" type="xs:string"/>
+                <xs:element name="Gender" type="xs:string"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
+
+<!--
+
+    xmlns:dimCust = "/home/apurva/Desktop/DM/xquery/dimcust.xsd"
+    xmlns:dimStores = "/home/apurva/Desktop/DM/xquery/DimStores.xsd"
+    xmlns:dimProd = "/home/apurva/Desktop/DM/xquery/proj_dim_prod.xsd"
+-->

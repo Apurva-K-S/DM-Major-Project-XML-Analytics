@@ -1,0 +1,26 @@
+Question:
+Rank the products in descending order(1st rank to maximum quantity product) by their total quantity and display product's ID, category, product sub category
+
+Expected Output:
++---------+------------------+--------------------------------+----------------+---------------+
+| Prod_id | Product_Category | Product_Sub_Category           | Total Quantity | Quantity rank |
++---------+------------------+--------------------------------+----------------+---------------+
+| Prod_6  | OFFICE SUPPLIES  | PAPER                          |          30871 |             1 |
+| Prod_3  | OFFICE SUPPLIES  | BINDERS AND BINDER ACCESSORIES |          22992 |             2 |
+| Prod_4  | TECHNOLOGY       | TELEPHONES AND COMMUNICATION   |          22969 |             3 |
+| Prod_5  | FURNITURE        | OFFICE FURNISHINGS             |          20648 |             4 |
+| Prod_8  | TECHNOLOGY       | COMPUTER PERIPHERALS           |          19222 |             5 |
+| Prod_13 | OFFICE SUPPLIES  | PENS & ART SUPPLIES            |          16980 |             6 |
+| Prod_1  | OFFICE SUPPLIES  | STORAGE & ORGANIZATION         |          13343 |             7 |
+| Prod_2  | OFFICE SUPPLIES  | APPLIANCES                     |          10901 |             8 |
+| Prod_15 | FURNITURE        | CHAIRS & CHAIRMATS             |           8903 |             9 |
+| Prod_11 | FURNITURE        | TABLES                         |           8864 |            10 |
+| Prod_17 | TECHNOLOGY       | OFFICE MACHINES                |           7856 |            11 |
+| Prod_12 | OFFICE SUPPLIES  | LABELS                         |           7301 |            12 |
+| Prod_9  | OFFICE SUPPLIES  | ENVELOPES                      |           6578 |            13 |
+| Prod_7  | OFFICE SUPPLIES  | RUBBER BANDS                   |           4920 |            14 |
+| Prod_10 | FURNITURE        | BOOKCASES                      |           4777 |            15 |
+| Prod_16 | OFFICE SUPPLIES  | SCISSORS, RULERS AND TRIMMERS  |           3931 |            16 |
+| Prod_14 | TECHNOLOGY       | COPIERS AND FAX                |           2128 |            17 |
++---------+------------------+--------------------------------+----------------+---------------+
+17 rows in set (0.07 sec)

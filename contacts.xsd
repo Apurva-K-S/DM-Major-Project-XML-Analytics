@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:contacts="http://www.example.com/contacts"
+targetNamespace="http://www.example.com/contacts"
+xmlns:name="http://www.example.com/name"
+elementFormDefault="qualified">
+
+    <include schemaLocation="contact_tags.xsd"/>
+
+    <import namespace="http://www.example.com/name" schemaLocation="name.xsd"/>
+    
+    <attributeGroup name="ContactAttributes">
+        <attribute name="version" type="decimal" fixed="1.0" />
+        <attribute name="source" type="string"/>
+    </attributeGroup>
+
+    <element name="contacts">
+        <complexType>
+            <sequence>
+                <element name="contact" minOccurs="0" maxOccurs="unbounded">
+                    <complexType>
+                            <sequence>
+                                <element ref="name:name"/>
+                                <element name="location" type="contacts:LocationType"/>
+                                <element name="phone" type="contacts:PhoneType"/>
+                                <element name="knows" type="contacts:KnowsType"/>
+                                <element name="description" type="contacts:DescriptionType"/>
+                            </sequence>
+                        <attribute name="tags" type="token"/>
+                        <attribute name="person" type="ID"/>
+                    </complexType>
+                </element>
+            </sequence>
+            <attributeGroup ref="contacts:ContactAttributes"/>
+        </complexType>
+    </element>
+
+    <complexType name="LocationType">
+        <choice minOccurs="0" maxOccurs="unbounded">
+            <element name="address" type="string"/>
+            <sequence>
+                <element name="latitude" type="contacts:UnknownStringOrFloatType"/>
+                <element name="longitude" type="contacts:UnknownStringOrFloatType"/>
+            </sequence>
+        </choice>
+    </complexType>
+    
+    <complexType name="PhoneType">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="kind" default="Home">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="Home"/>
+                            <enumeration value="Work"/>
+                            <enumeration value="Cell"/>
+                            <enumeration value="Fax"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+
+    <complexType name="KnowsType">
+    <attribute name="contacts" type="IDREFS"/>
+    </complexType>
+
+    <complexType name="DescriptionType" mixed="true">
+        <choice minOccurs="0" maxOccurs="unbounded">
+            <element name="em" type="string"/>
+            <element name="strong" type="string"/>
+            <element name="br" type="string"/>
+        </choice>
+    </complexType>
+
+    <!--
+     ContactTagsType moved to contact_tags.xsd 
+    <simpleType name="ContactTagsType">
+        <restriction base="string">
+            <enumeration value="author"/>
+            <enumeration value="xml"/>
+            <enumeration value="poetry"/>
+            <enumeration value="consultant"/>
+            <enumeration value="CGI"/>
+            <enumeration value="semantics"/>
+            <enumeration value="animals"/>
+        </restriction>
+    </simpleType>-->
+
+
+
+    <!--<simpleType name="ContactTagsListType">
+        <list itemType="contacts:ContactTagsType"/>
+    </simpleType>-->
+    
+    <simpleType name="UnknownString">
+        <restriction base="string">
+            <enumeration value="Unknown"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="UnknownStringOrFloatType">
+        <union memberTypes="float contacts:UnknownString"/>
+    </simpleType>
+
+</schema>

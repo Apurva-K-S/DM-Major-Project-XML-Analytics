@@ -1,0 +1,12 @@
+<Company xmlns="http://sample2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://sample2">
+
+    <Employees>
+        <Employee>
+            <name>Oliver</name>
+            <position>Developer</position> 
+            <department>development_dept</department>
+        </Employee>
+    </Employees>
+
+</Company>

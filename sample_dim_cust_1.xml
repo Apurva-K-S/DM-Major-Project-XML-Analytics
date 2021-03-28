@@ -1,0 +1,11 @@
+<customer
+xmlns="http://www.example.com/sampledimcust"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.com/sampledimcust name.xsd">
+    
+    <CustomerID>1</CustomerID>
+    <CustomerAltID>2</CustomerAltID>
+    <CustomerName>Henry Ford</CustomerName>
+    <Gender>M</Gender>
+
+</customer>

@@ -1,3 +1,8 @@
-for $x in doc("books.xml")/books/book
-where $x/price>30
-return $x/title
+let $books := (doc("books.xml")/books/book)
+return <table><tr><th>Title</th><th>Price</th></tr>
+{
+   for $x in $books   
+   order by $x/price
+   return <tr><td>{data($x/title)}</td><td>{data($x/price)}</td></tr>
+}
+</table>

@@ -1,0 +1,51 @@
+<!--<order num="00299432" date="2015-09-15" cust="0221A">
+ <item>
+    <dept>"WMN"</dept>
+    <num>557</num> 
+    <quantity>1 </quantity>
+    <color>"navy"</color>
+</item>
+<item>
+    <dept>"ACC"</dept>
+    <num>557</num> 
+    <quantity>1 </quantity>
+    <color>"navy"</color>
+</item>
+<item>
+    <dept>"WMN"</dept>
+    <num>563</num> 
+    <quantity>1 </quantity>
+</item>
+<item>
+    <dept>"ACC"</dept>
+    <num>443</num> 
+    <quantity>2 </quantity>
+</item>
+<item>
+    <dept>"MEN"</dept>
+    <num>784</num> 
+    <quantity>1 </quantity>
+    <color>"white"</color>
+</item>
+<item>
+    <dept>"MEN"</dept>
+    <num>784</num> 
+    <quantity>1 </quantity>
+    <color>"gray"</color>
+</item>
+<item>
+    <dept>"WMN"</dept>
+    <num>557</num> 
+    <quantity>1 </quantity>
+    <color>"black"</color>
+</item>
+
+</order>-->
+<order num="00299432" date="2015-09-15" cust="0221A">
+<item dept="WMN" num="557" quantity="1" color="navy"/>
+<item dept="ACC" num="563" quantity="1"/>
+<item dept="ACC" num="443" quantity="2"/>
+<item dept="MEN" num="784" quantity="1" color="white"/>
+<item dept="MEN" num="784" quantity="1" color="gray"/>
+<item dept="WMN" num="557" quantity="1" color="black"/>
+</order>
